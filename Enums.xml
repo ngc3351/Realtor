@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<doc>
+  <dic name="Material">
+    Пан:Панельное;
+    Кир:Кирпичное;
+    Мнл:Монолитное;
+    Дер:Деревянное;
+    Блч:Блочное;
+    Шлк:Шлакоблочное
+  </dic>
+
+  <dic name="Series">
+    Подселение;
+    Гостинка;
+    Малосемейка;
+    Хрущевка;
+    81-я серия;
+    83-я серия;
+    121-я серия;
+    125-я серия (ленпроект);
+    Чешский пр-т;
+    Индивид. пр-т
+  </dic>
+
+  <dic name="Flours" 
+       keytype="System.Byte">
+    1;2;3;4;5;6;7;8;9;10;
+    11;12;13;14;15;16;17;
+    18;19;20;21;22;23;24;
+    25;26
+  </dic>
+
+  <dic name="FloursCottage"
+       keytype="System.Byte">
+    1;2;3;4;5;6
+  </dic>
+  
+  <dic name="Flour" 
+       keytype="System.Int32">
+    -1:цк;
+    -2:пд;
+    1;2;3;4;5;6;7;8;9;10;
+    11;12;13;14;15;16;17;
+    18;19;20;21;22;23;24;
+    25;26
+  </dic>
+
+  <dic name="FlourEx" 
+       keytype="System.Int32">
+    -1:Цоколь;
+    -2:Подвал;
+    1;2;3;4;5;6;7;8;9;10;
+    11;12;13;14;15;16;17;
+    18;19;20;21;22;23;24;
+    25;26
+  </dic>
+
+  <dic name="Raspol">
+    Смж:Смежнные комнаты;
+    Раз:Раздельные комнаты
+  </dic>
+
+  <dic name="WC">
+    Сов:Совместный;
+    Раз:Разднельный;
+    2СУ:2 санузла;
+    -:Отсутствует
+  </dic>
+
+  <dic name="Balcony">
+    -:Нет;
+    Л:Лоджия;
+    Б:Балкон
+  </dic>
+
+  <dic name="Flats" 
+       keytype="System.Byte">
+    1;2;3;4;5;6;7;8;9;10
+  </dic>
+
+  <dic name="Electricity">
+    C:Центральное;
+    A:Автономное;
+    C+A:Центр. + Автономное;
+    -:Отсутствует
+  </dic>
+
+  <dic name="Hot">
+    C:Центральное;
+    A:Автономное;
+    C+A:Центр. + Автономное;
+    -:Отсутствует
+  </dic>
+  
+  <dic name="Water">
+    C:Центральное;
+    A:Автономное;
+    C+A:Центр. + Автономное;
+    -:Отсутствует
+  </dic>
+
+  <dic name="Prava" keytype="System.Byte">
+    2:частная собственность;
+    3:аренда 5 лет;
+    4:аренда 10 лет;
+    5:аренда 15 лет;
+    6:аренда 20 лет;
+    7:аренда 25 лет
+  </dic>
+
+  <dic name="NoresidentObjectType" keytype="System.Int32">
+    5:Офисное помещ.;
+    6:Складское помещ.;
+    7:Торговое помещ.;
+    8:Производ. помещ.;
+    9:Прочие объекты
+  </dic>
+
+  <dic name="YesNo" 
+       keytype="System.Windows.Forms.CheckState">
+    Checked:+;
+    Unchecked:-
+  </dic>
+
+  <dic name="YesNo" 
+       valuetype="System.Windows.Forms.CheckState">
+    +:Checked;
+    -:Unchecked
+  </dic>
+
+  <dic name="YesNoUnknow" 
+       keytype="System.Windows.Forms.CheckState">
+    Indeterminate:;
+    Checked:+;
+    Unchecked:-
+  </dic>
+
+  <dic name="YesNoUnknow" 
+       valuetype="System.Windows.Forms.CheckState">
+    :Indeterminate;
+    +:Checked;
+    -:Unchecked
+  </dic>
+</doc>
+

@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72E5CB8F-9F10-4400-A04C-108BA760991C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Realtor</RootNamespace>
+    <AssemblyName>Realtor</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="BLToolkit.3, Version=3.1.0.0, Culture=neutral, PublicKeyToken=df378e98cb36b631, processorArchitecture=MSIL">
+      <HintPath>lib\BLToolkit.3.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MyDownloader.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\MyDownloader.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MyDownloader.Extension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\MyDownloader.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Distr\DevTools\MySql\mysql-connector-net-5.2.5-src\MySql.Data\Provider\bin\net-2.0\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Category.cs" />
+    <Compile Include="ComponentModel\IApplication.cs" />
+    <Compile Include="ComponentModel\IModule.cs" />
+    <Compile Include="Controls\BuildingFeatureFlat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildingFeatureFlat.Designer.cs">
+      <DependentUpon>BuildingFeatureFlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClientsManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ClientsManager.Designer.cs">
+      <DependentUpon>ClientsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildingFeatureCottage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildingFeatureCottage.Designer.cs">
+      <DependentUpon>BuildingFeatureCottage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ColumnsSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColumnsSelector.Designer.cs">
+      <DependentUpon>ColumnsSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildingFeatureFlatEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildingFeatureFlatEx.Designer.cs">
+      <DependentUpon>BuildingFeatureFlatEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilterObjectFeature.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterObjectFeature.Designer.cs">
+      <DependentUpon>FilterObjectFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterPanel.Designer.cs">
+      <DependentUpon>FilterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ObjectEditControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ObjectsBrowserEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ObjectsBrowserEx.Designer.cs">
+      <DependentUpon>ObjectsBrowserEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ObjectFeatureNoresident.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ObjectFeatureNoresident.Designer.cs">
+      <DependentUpon>ObjectFeatureNoresident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ObjectFeatureLand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ObjectFeatureLand.Designer.cs">
+      <DependentUpon>ObjectFeatureLand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ObjectFeatureCottage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ObjectFeatureCottage.Designer.cs">
+      <DependentUpon>ObjectFeatureCottage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ObjectFeatureFlat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ObjectFeatureFlat.Designer.cs">
+      <DependentUpon>ObjectFeatureFlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WizardControl\Design\WizardDesigner.cs" />
+    <Compile Include="Controls\WizardControl\Design\WizardPageDesigner.cs" />
+    <Compile Include="Controls\WizardControl\WizardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WizardControl\WizardControl.Designer.cs">
+      <DependentUpon>WizardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WizardControl\WizardPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WizardControl\WizardPageEventArgs.cs" />
+    <Compile Include="Controls\WizardControl\WizardValidatePageEventArgs.cs" />
+    <Compile Include="CustomWebRequest\CustomWebRequest.cs" />
+    <Compile Include="CustomWebRequest\MyPolicy.cs" />
+    <Compile Include="DbRun.cs" />
+    <Compile Include="Dialogs\ClientEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ClientEditDialog.Designer.cs">
+      <DependentUpon>ClientEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CompanyEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CompanyEditDialog.Designer.cs">
+      <DependentUpon>CompanyEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ActivationWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ActivationWizard.Designer.cs">
+      <DependentUpon>ActivationWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ObjectEditDialogEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ObjectEditDialogEx.Designer.cs">
+      <DependentUpon>ObjectEditDialogEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LogonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LogonForm.Designer.cs">
+      <DependentUpon>LogonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UpdateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UpdateDialog.Designer.cs">
+      <DependentUpon>UpdateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="FlickerFreeTableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FlickerFreeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Globalization\LocalizedCategoryAttribute.cs" />
+    <Compile Include="Globalization\LocalizedDescriptionAttribute.cs" />
+    <Compile Include="Globalization\LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="Globalization\LocalizedEnumConverter.cs" />
+    <Compile Include="Globalization\LocalizedResourceManager.cs" />
+    <Compile Include="Globalization\LocalizedWithAttribute.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBuddyProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="realtorDataSet.cs">
+      <DependentUpon>realtorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Abstract\IDataService.cs" />
+    <Compile Include="Services\Abstract\IUsersService.cs" />
+    <Compile Include="Services\DbServices\DataService.cs" />
+    <Compile Include="Services\WebClient\Commands.cs" />
+    <Compile Include="Services\WebClient\WebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\WebClient\IWebClient.cs" />
+    <Compile Include="Services\Providers\MySqlDataProvider.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\BuildingFeatureFlat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BuildingFeatureFlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ClientsManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClientsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BuildingFeatureCottage.resx">
+      <DependentUpon>BuildingFeatureCottage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ColumnsSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ColumnsSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BuildingFeatureFlatEx.resx">
+      <DependentUpon>BuildingFeatureFlatEx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FilterObjectFeature.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FilterObjectFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FilterPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FilterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ObjectsBrowserEx.resx">
+      <DependentUpon>ObjectsBrowserEx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ObjectFeatureNoresident.resx">
+      <DependentUpon>ObjectFeatureNoresident.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ObjectFeatureLand.resx">
+      <DependentUpon>ObjectFeatureLand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ObjectFeatureCottage.resx">
+      <DependentUpon>ObjectFeatureCottage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ObjectFeatureFlat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ObjectFeatureFlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WizardControl\WizardControl.resx">
+      <DependentUpon>WizardControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ClientEditDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClientEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CompanyEditDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CompanyEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ActivationWizard.resx">
+      <DependentUpon>ActivationWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ObjectEditDialogEx.resx">
+      <DependentUpon>ObjectEditDialogEx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LogonForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LogonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UpdateDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UpdateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UserControl1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SettingsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\BalconyList.datasource" />
+    <None Include="Properties\DataSources\City.datasource" />
+    <None Include="Properties\DataSources\CityRayon.datasource" />
+    <None Include="Properties\DataSources\CityStreet.datasource" />
+    <None Include="Properties\DataSources\FlatsList.datasource" />
+    <None Include="Properties\DataSources\FlourList.datasource" />
+    <None Include="Properties\DataSources\FloursList.datasource" />
+    <None Include="Properties\DataSources\MaterialList.datasource" />
+    <None Include="Properties\DataSources\ObjSaleList.datasource" />
+    <None Include="Properties\DataSources\RaspolList.datasource" />
+    <None Include="Properties\DataSources\SeriesList.datasource" />
+    <None Include="Properties\DataSources\StatList.datasource" />
+    <None Include="Properties\DataSources\WCList.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="realtorDataSet.xsc">
+      <DependentUpon>realtorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="realtorDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="realtorDataSet.xss">
+      <DependentUpon>realtorDataSet.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Services\Entities.cs" />
+    <Compile Include="Services\DbServices\UserService.cs" />
+    <Compile Include="Services\ServicesProvider.cs" />
+    <Compile Include="Services\Utils.cs" />
+    <Compile Include="Services\WebServices\DataService.cs" />
+    <Compile Include="Dialogs\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtcDateMapper.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="WaitCursor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_card_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brush3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_preferences.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Enums.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\wait_form_bg.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
