@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace Realtor
 {
@@ -12,9 +13,15 @@ namespace Realtor
             if (IsRun)
                 return;
 
-            ProcessStartInfo i = new ProcessStartInfo(AppDomain.CurrentDomain.BaseDirectory + "dbrun.exe");
+            string file = "dbrun.exe";
+            string dir = AppDomain.CurrentDomain.BaseDirectory;
+            if (!File.Exists(dir + file)) {
+                dir += "../../db/";
+            }
+
+            ProcessStartInfo i = new ProcessStartInfo(dir + file);
             i.Arguments = string.Format(@"-u root -P 3309 -h {0}db\ --character-sets-dir={0}share\charsets\ --language={0}share\english\ --default-character-set=cp1251"
-                // --log=d:\_db.log"
+                 //+ "--log=db.log"
                 , AppDomain.CurrentDomain.BaseDirectory);
             i.CreateNoWindow = true;
             i.UseShellExecute = false;

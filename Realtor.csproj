@@ -52,7 +52,7 @@
     </Reference>
     <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Distr\DevTools\MySql\mysql-connector-net-5.2.5-src\MySql.Data\Provider\bin\net-2.0\Debug\MySql.Data.dll</HintPath>
+      <HintPath>lib\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
